@@ -1,0 +1,43 @@
+{
+  "name": "lru-memoize-map",
+  "version": "0.1.0",
+  "main": "es/index.js",
+  "esnext": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaredlunde/lru-memoize-map"
+  },
+  "scripts": {
+    "build": "npm run build:commonjs && npm run build:es && npm run build:dist",
+    "build:commonjs": "rm -rf commonjs && cross-env NODE_ENV=commonjs babel ./src --out-dir commonjs",
+    "build:es": "rm -rf es && cross-env NODE_ENV=es babel ./src --out-dir es",
+    "build:dist": "rm -rf dist && cross-env BABEL_ENV=production NODE_ENV=production rollup -c -i src/index.js -o dist/lru-memoize-map.js",
+    "watch:commonjs": "cross-env NODE_ENV=commonjs babel ./src -w --out-dir commonjs",
+    "watch:es": "cross-env NODE_ENV=es babel ./src -w --out-dir es",
+    "prepublish": "npm run build"
+  },
+  "author": "Jared Lunde",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.35",
+    "@babel/core": "^7.0.0-beta.35",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0-beta.35",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0-beta.35",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0-beta.35",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0-beta.35",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0-beta.35",
+    "@babel/plugin-transform-react-constant-elements": "^7.0.0-beta.35",
+    "@babel/plugin-transform-react-inline-elements": "^7.0.0-beta.35",
+    "@babel/polyfill": "^7.0.0-beta.35",
+    "@babel/preset-env": "^7.0.0-beta.35",
+    "@babel/preset-stage-2": "^7.0.0-beta.35",
+    "cross-env": "^5.1.1",
+    "rollup": "^0.52.2",
+    "rollup-plugin-babel": "^4.0.0-beta.0",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}
