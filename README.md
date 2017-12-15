@@ -1,5 +1,12 @@
+## Install
 `yarn add lru-memoize-map`
 
+
+### Usage
+- exports 'memoize' function as default module
+- memoize(lruCacheSize, options)
+  - @lruCacheSize: the number of entries to hold in the cache at a given time
+  - @options: {multiArg: (bool), coalesceWith: (function)} see below for examples
 
 ```js
 import memoize from 'lru-memoize-map'
