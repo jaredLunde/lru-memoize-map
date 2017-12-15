@@ -6,7 +6,7 @@
 - exports 'memoize' function as default module
 - memoize(lruCacheSize, options)
   - @lruCacheSize: the number of entries to hold in the cache at a given time
-  - @options: {multiArg: (bool), coalesceWith: (function)} see below for examples
+  - @options: {multiArgs: (bool), coalesceWith: (function)} see below for examples
 
 ```js
 import memoize from 'lru-memoize-map'
@@ -23,7 +23,7 @@ const memoizer = memoize(1024)(
 // This option creates an array from the arguments and uses that as the Map
 // key. All entries in the cache must be checked for matches on the argument
 // array in this case each time the cache is utilized.
-const multiArgMemoizer = memoize(1024, {multiArg: true})(
+const multiArgsMemoizer = memoize(1024, {multiArgs: true})(
   function (arg1, arg2) {
     // do some work
   }
