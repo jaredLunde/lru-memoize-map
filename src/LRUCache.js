@@ -17,7 +17,7 @@ export default function LRUCache (size, multiArgs = false) {
 
       if (wasEqual) {
         entryKey = k
-        break
+        break;
       }
     }
 
