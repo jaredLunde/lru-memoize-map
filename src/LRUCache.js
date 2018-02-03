@@ -8,6 +8,10 @@ export default function LRUCache (size, multiArgs = false) {
       let x
       let wasEqual = true
 
+      if (k.length !== key.length) {
+        continue
+      }
+
       for (x = 0; x < k.length; x++) {
         if (key[x] !== k[x]) {
           wasEqual = false
