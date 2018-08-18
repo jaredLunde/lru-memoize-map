@@ -5,11 +5,7 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage",
-            "targets": {
-              "browsers": "defaults"
-            }
+            "modules": false
           }
         ]
       ],
@@ -26,10 +22,6 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "useBuiltIns": "usage",
-            "targets": {
-              "browsers": "defaults"
-            },
             "modules": "commonjs"
           }
         ]
@@ -45,9 +37,8 @@
       "presets": [
         [
           "@babel/preset-env", {
-            "debug": true,
-            "modules": false,
-            "useBuiltIns": "usage"
+            "loose": true,
+            "modules": false
           }
         ]
       ],
@@ -63,11 +54,7 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage",
-            "targets": {
-              "browsers": ["chrome >= 56"]
-            }
+            "modules": false
           }
         ]
       ],
@@ -83,8 +70,7 @@
         [
           "@babel/preset-env", {
             "loose": true,
-            "modules": false,
-            "useBuiltIns": "usage"
+            "modules": false
           }
         ]
       ],
